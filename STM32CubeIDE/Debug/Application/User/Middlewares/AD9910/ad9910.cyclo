@@ -1,0 +1,6 @@
+../Application/User/Middlewares/AD9910/ad9910.c:13:6:AD9910_Init	1
+../Application/User/Middlewares/AD9910/ad9910.c:24:9:AD9910_GetRegSize	5
+../Application/User/Middlewares/AD9910/ad9910.c:63:6:AD9910_Reset	1
+../Application/User/Middlewares/AD9910/ad9910.c:70:6:AD9910_IOUpdate	1
+../Application/User/Middlewares/AD9910/ad9910.c:77:19:AD9910_WriteRegister	3
+../Application/User/Middlewares/AD9910/ad9910.c:104:19:AD9910_ReadRegister	5
