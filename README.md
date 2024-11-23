@@ -1,0 +1,1 @@
+This code is developped to control a DDS AD910 from analog device with a nucleo-H723 board, and is tested with a module from amazon such as : https://www.amazon.fr/AD9910-Module-d%C3%A9chantillonnage-fr%C3%A9quence-sinueux/dp/B0CB5DWQMK?th=1
