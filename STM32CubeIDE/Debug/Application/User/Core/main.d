@@ -1,5 +1,5 @@
 Application/User/Core/main.o: \
- C:/Users/abess/OneDrive/Documents/Software/AD9910_Driver/AD9910_Driver/Core/Src/main.c \
+ C:/Users/abess/OneDrive/Documents/Software/AD9910/AD9910/Core/Src/main.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../Core/Inc/stm32h7xx_hal_conf.h \
@@ -35,7 +35,7 @@ Application/User/Core/main.o: \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
- C:/Users/abess/OneDrive/Documents/Software/AD9910_Driver/AD9910_Driver/STM32CubeIDE/Application/User/Middlewares/AD9910/ad9910.h
+ C:/Users/abess/OneDrive/Documents/Software/AD9910/AD9910/STM32CubeIDE/Application/User/Middlewares/AD9910/ad9910.h
 ../../Core/Inc/main.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
 ../../Core/Inc/stm32h7xx_hal_conf.h:
@@ -71,4 +71,4 @@ Application/User/Core/main.o: \
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_spi_ex.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h:
-C:/Users/abess/OneDrive/Documents/Software/AD9910_Driver/AD9910_Driver/STM32CubeIDE/Application/User/Middlewares/AD9910/ad9910.h:
+C:/Users/abess/OneDrive/Documents/Software/AD9910/AD9910/STM32CubeIDE/Application/User/Middlewares/AD9910/ad9910.h:

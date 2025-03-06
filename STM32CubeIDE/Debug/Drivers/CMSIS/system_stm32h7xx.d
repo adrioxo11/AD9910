@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32h7xx.o: \
- C:/Users/abess/OneDrive/Documents/Software/AD9910_Driver/AD9910_Driver/Core/Src/system_stm32h7xx.c \
+ C:/Users/abess/OneDrive/Documents/Software/AD9910/AD9910/Core/Src/system_stm32h7xx.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h723xx.h \
  ../../Drivers/CMSIS/Include/core_cm7.h \

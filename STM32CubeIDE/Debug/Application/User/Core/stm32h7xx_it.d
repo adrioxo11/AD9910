@@ -1,5 +1,5 @@
 Application/User/Core/stm32h7xx_it.o: \
- C:/Users/abess/OneDrive/Documents/Software/AD9910_Driver/AD9910_Driver/Core/Src/stm32h7xx_it.c \
+ C:/Users/abess/OneDrive/Documents/Software/AD9910/AD9910/Core/Src/stm32h7xx_it.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../../Core/Inc/stm32h7xx_hal_conf.h \

@@ -114,6 +114,7 @@ void DDS_Test() {
         printf("Valeur lue du registre 0x0E : 0x%016lX\n", read_value);
     } else {
         printf("Erreur de lecture dans le registre.");
+        printf("Test commit develop");
     }
 }
 void DDS_Reg_Update() {
