@@ -101,7 +101,7 @@ void DDS_Test() {
     uint64_t read_value = 0x000000000000;
 
     // Écriture dans un registre (par exemple 0x04 pour la fréquence de base)
-    if (AD9910_WriteRegister(0x0E, 0x3FFF00000016E360) == HAL_OK) {
+    if (AD9910_WriteRegister(0x00, 0x00800302) == HAL_OK) {
         printf("Registre écrit avec succès.\n");
     } else {
         printf("Erreur d'écriture dans le registre.\n");
@@ -111,7 +111,7 @@ void DDS_Test() {
 
     // Lecture dans un registre (par exemple 0x04 pour la fréquence de base)
     if (AD9910_ReadRegister(0x0E, &read_value) == HAL_OK) {
-        printf("Valeur lue du registre 0x0E : 0x%016lX\n", read_value);
+        printf("Valeur lue du registre 0x00 : 0x%016lX\n", read_value);
     } else {
         printf("Erreur de lecture dans le registre.");
         printf("Test commit develop");
