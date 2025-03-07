@@ -72,7 +72,8 @@ UART_HandleTypeDef huart3;
 // Déclaration des variables globales
 UART_HandleTypeDef huart3;
 char rx_buffer[2];        // Buffer pour réception
-char command_buffer[10];  // Buffer pour commande utilisateur
+char command_buffer[12];  // Buffer pour commande utilisateur
+uint64_t FTW;
 volatile uint8_t command_ready = 0;
 
 uint64_t		ad9910_regs[NB_AD9910_REG];
@@ -97,6 +98,21 @@ void UART_SendString(char *message);
 
 void processCommand(void);
 
+uint64_t convert_hz_to_hex(int hz) {
+    uint32_t hex_value = (uint32_t)round((pow(2, 32) * hz) / 480000000.0);
+
+    // Combiner 0x3FFF0000 et la valeur calculée dans un uint64_t
+    uint64_t result = ((uint64_t)0x3FFF0000 << 32) | hex_value;
+    printf("Valeur HEXA sur 8 octets : 0x%016llX\n", result);
+
+    return result;
+}
+
+
+int extract_int_from_string(const char *str) {
+    return atoi(str + 2); // Ignorer les 2 premiers caractères et convertir en entier
+}
+
 void DDS_Test() {
     uint64_t read_value = 0x000000000000;
 
@@ -117,8 +133,13 @@ void DDS_Test() {
         printf("Test commit develop");
     }
 }
+
+
 void DDS_Reg_Update() {
 	uint64_t readback = 0;
+	int concatenated_value = extract_int_from_string(command_buffer);
+	FTW = convert_hz_to_hex(concatenated_value);
+
 
 	ad9910_regs[0] 		= 0x00800302;
 	ad9910_regs[1] 		= 0x01000820;
@@ -134,14 +155,14 @@ void DDS_Reg_Update() {
 	ad9910_regs[0x0B] 	= 0x0000000000000000;
 	ad9910_regs[0x0C] 	= 0x0000000000000000;
 	ad9910_regs[0x0D] 	= 0x00000000;
-	ad9910_regs[0x0E] 	= 0x3FFF000000000000;
-	ad9910_regs[0x0F] 	= 0x3FFF000000000000;
-	ad9910_regs[0x10] 	= 0x3FFF000000000000;
-	ad9910_regs[0x11] 	= 0x3FFF000000000000;
-	ad9910_regs[0x12] 	= 0x3FFF000000000000;
-	ad9910_regs[0x13] 	= 0x3FFF000000000000;
-	ad9910_regs[0x14] 	= 0x3FFF000000000000;
-	ad9910_regs[0x15] 	= 0x3FFF0000574D1F00;
+	ad9910_regs[0x0E] 	= FTW;
+	ad9910_regs[0x0F] 	= FTW;
+	ad9910_regs[0x10] 	= FTW;
+	ad9910_regs[0x11] 	= FTW;
+	ad9910_regs[0x12] 	= FTW;
+	ad9910_regs[0x13] 	= FTW;
+	ad9910_regs[0x14] 	= FTW;
+	ad9910_regs[0x15] 	= FTW;
 	ad9910_regs[0x16] 	= 0x00000000;
 	printf("Ecriture des registres.\n");
 
